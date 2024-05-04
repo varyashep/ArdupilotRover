@@ -6,15 +6,15 @@
 
 * RF370 Brushed Motors
 
-<img src="https://github.com/varyashep/ArdupilotRover/blob/main/driver.png" width="300" height="200">
+<img src="https://github.com/varyashep/ArdupilotRover/blob/main/motor.jpg" width="300" height="200">
 
 * Pixhawk 2.8.1
 
-![image](./pixhawk.jpg =300x300)
+<img src="https://github.com/varyashep/ArdupilotRover/blob/main/pixhawk.jpg" width="300" height="300">
 
 * L298N motor driver
 
-![image](./driver.png =300x300)
+<img src="https://github.com/varyashep/ArdupilotRover/blob/main/driver.png" width="300" height="300">
 
 * GPS module Ublox NEO-M8N
 
