@@ -44,7 +44,6 @@ function update()
 			relay:off(RELAY_IN1)
 			RELAY_IN2_STATE = 1
 			RELAY_IN1_STATE = 0
-  	  -- SERVO1_REVERSED:set(1)
 	  -- gcs:send_text(3, "Throttle: " .. motor_right .. ", RELAY_IN3: " .. RELAY_IN3_STATE .. ", RELAY_IN4: " .. RELAY_IN4_STATE)
 		end
 	else
@@ -54,7 +53,6 @@ function update()
 			relay:off(RELAY_IN2)
 			RELAY_IN2_STATE = 0
 			RELAY_IN1_STATE = 1
-  	  -- SERVO1_REVERSED:set(0)
 	  -- gcs:send_text(3, "Throttle: " .. motor_right .. ", RELAY_IN3: " .. RELAY_IN3_STATE .. ", RELAY_IN4: " .. RELAY_IN4_STATE)
 		end
 	end
@@ -75,7 +73,6 @@ function update()
 			relay:off(RELAY_IN4)
 			RELAY_IN3_STATE = 1
 			RELAY_IN4_STATE = 0
-	  -- SERVO3_REVERSED:set(1)
 	  -- gcs:send_text(3, "Steering: " .. motor_left .. ", RELAY_IN1: " .. RELAY_IN1_STATE .. ", RELAY_IN2: " .. RELAY_IN2_STATE)
 		end
 	else
@@ -85,7 +82,6 @@ function update()
 			relay:off(RELAY_IN3)
 			RELAY_IN3_STATE = 0
 			RELAY_IN4_STATE = 1
-	  -- SERVO3_REVERSED:set(0)
 	  -- gcs:send_text(3, "Steering: " .. motor_left .. ", RELAY_IN1: " .. RELAY_IN1_STATE .. ", RELAY_IN2: " .. RELAY_IN2_STATE)
 		end
 	end
