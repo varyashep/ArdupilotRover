@@ -6,7 +6,7 @@
 
 * RF370 Brushed Motors
 
-![image](./motor.jpg =300x200)
+![image](https://github.com/varyashep/ArdupilotRover/blob/main/driver.png =300x200)
 
 * Pixhawk 2.8.1
 
