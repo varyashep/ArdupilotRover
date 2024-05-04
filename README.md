@@ -1,6 +1,6 @@
 # Ardupilot Rover L298N
 
-## Manual for Ardupilot based Rover with L298N motor driver controlled with simple DC brushed motors
+## Manual for Ardupilot based Rover with L298N motor driver controlled by simple DC brushed motors
 
 ### Components
 
@@ -40,3 +40,29 @@
 
 ### Ardupilot Setup
 
+|     Key/Value    |     Comments    |
+|---|---|
+| MOT_PWM_TYPE,4 | Set motor’s type to BrushedBiPolar |
+| RELAY_PIN,50 | AUX1 (reserved) |
+| RELAY_PIN,51 | AUX2 (reserved) |
+| RELAY_PIN3,52 | AUX3 |
+| RELAY_PIN4,53 | AUX4 |
+| RELAY_PIN5,54 | AUX5 |
+| RELAY_PIN6,55 | AUX6 |
+| SCR_ENABLE,1 | Enable LUA scripting |
+| SERVO1_FUNCTION,73 | Throttle Left |
+| SERVO1_MAX,2000 |  |
+| SERVO1_MIN,1000 |  |
+| SERVO1_REVERSED,0 |  |
+| SERVO1_TRIM,1500 |  |
+| SERVO3_FUNCTION,74 | Throttle Right |
+| SERVO3_MAX,2000 |  |
+| SERVO3_MIN,1000 |  |
+| SERVO3_REVERSED,0 |  |
+| SERVO3_TRIM,1500 | |
+| SERVO9_FUNCTION,-1 | AUX1 GPIO mode (reserved) |
+| SERVO10_FUNCTION,-1 | AUX2 (reserved) |
+| SERVO11_FUNCTION,-1 | AUX3 |
+| SERVO12_FUNCTION,-1 | AUX4 |
+| SERVO13_FUNCTION,-1 | AUX5 |
+| SERVO14_FUNCTION,-1 | AUX6 |
