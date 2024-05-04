@@ -2,8 +2,41 @@
 
 ## Manual for Ardupilot based Rover with L298N motor driver controlled with simple DC brushed motors
 
-### Components:
+### Components
 
-RF370 Brushed Motors
+* RF370 Brushed Motors
 
-![image](https://ae01.alicdn.com/kf/S0d94ca04a5fe4bcf85f9d83374618d75q.jpg_640x640Q90.jpg_.webp){ width = 50%}
+![image](./motor.jpg =300x200)
+
+* Pixhawk 2.8.1
+
+![image](./pixhawk.jpg =300x300)
+
+* L298N motor driver
+
+![image](./driver.png =300x300)
+
+* GPS module Ublox NEO-M8N
+
+* Telemetry module ReadyToSky FPV 3DR 433/915 MHz 
+
+* Receiver Flysky FS-iA6B 2.4 
+
+### Wiring 
+
+| L298N pin  |  Pixhawk pin/device   |
+|------------|-----------------------|
+|     IN1    |  AUX3                 |
+|     IN2    |  AUX4                 |
+|     IN3    |  AUX5                 |
+|     IN4    |  AUX6                 |
+|     GND    |  Any output rail GND  |
+|     ENA    |  PWM1                 |
+|     ENB    |  PWM2                 |
+|   motorA   |  Driving motor        |
+|   motorB   |  Driving motor        |
+|   Vcc+GND  |  Power module output  |
+
+
+### Ardupilot Setup
+
