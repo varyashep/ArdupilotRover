@@ -43,9 +43,13 @@ This rover is made on a tracked platform so both motors are set for driving. Sin
 This motor type allows us to handle every relay state correctly. 
 
 RC sticks mode is set to 1. By setting RCMAP parameters (listed below) we've managed to use only 1 stick (right one). These can vary depending on your transmitter.
+<br/>
 RCMAP_PITCH,3
+<br/>
 RCMAP_ROLL,4
+<br/>
 RCMAP_THROTTLE,2
+<br/>
 RCMAP_YAW,1
 
 ### Ardupilot Setup
