@@ -81,11 +81,13 @@ RCMAP_YAW,1
 | SERVO13_FUNCTION,-1 | AUX5 |
 | SERVO14_FUNCTION,-1 | AUX6 |
 
+<img src="https://github.com/varyashep/ArdupilotRover/blob/main/aux(1).jpg" width="300" height="300">
+
 In Mission Planner upload the RoverCode.lua script to the scripts folder and reboot the Pixhawk. 
 
 ### Code Details
 
-Left and right motor receive values from SERVO channels (73 and 74 stand for Throttle Left and Throttle Right respectively) using SRV_Channels:get_ouput_pwm function. 
+Left and right motor receive values from SERVO channels 2 and 4 (73 and 74 stand for Throttle Left and Throttle Right respectively) using SRV_Channels:get_ouput_pwm function. 
 
 Since Trim is set to 1500, that's the value when relays are off. If value is more or less than 1500, rover moves either back or forward.
 

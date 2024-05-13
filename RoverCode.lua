@@ -8,8 +8,6 @@ local RELAY_IN1_STATE = 0
 local RELAY_IN2_STATE = 0
 local RELAY_IN3_STATE = 0
 local RELAY_IN4_STATE = 0
-local RELAY_MOTOR_LEFT = 'stop'
-local RELAY_MOTOR_RIGHT = 'stop'
 
 
 function update()
