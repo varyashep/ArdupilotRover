@@ -8,7 +8,7 @@
 
 <img src="https://github.com/varyashep/ArdupilotRover/blob/main/motor.jpg" width="300" height="200">
 
-* Pixhawk 2.8.1
+* Pixhawk 2.4.8
 
 <img src="https://github.com/varyashep/ArdupilotRover/blob/main/pixhawk.jpg" width="300" height="300">
 
@@ -21,6 +21,8 @@
 * Telemetry module ReadyToSky FPV 3DR 433/915 MHz 
 
 * Receiver Flysky FS-iA6B 2.4 
+
+
 
 ### Wiring 
 
@@ -37,6 +39,14 @@
 |   motorB   |  Driving motor        |
 |   Vcc+GND  |  Power module output  |
 
+This rover is made on a tracked platform so both motors are set for driving. Since we needed our rover to work correctly in auto and guided modes, we've decided to set MOT_PWM_TYPE to BrushedWithBipolar (all the parameters listed below).
+This motor type allows us to handle every relay state correctly. 
+
+RC sticks mode is set to 1. By setting RCMAP parameters (listed below) we've managed to use only 1 stick (right one). These can vary depending on your transmitter.
+RCMAP_PITCH,3
+RCMAP_ROLL,4
+RCMAP_THROTTLE,2
+RCMAP_YAW,1
 
 ### Ardupilot Setup
 
@@ -66,3 +76,12 @@
 | SERVO12_FUNCTION,-1 | AUX4 |
 | SERVO13_FUNCTION,-1 | AUX5 |
 | SERVO14_FUNCTION,-1 | AUX6 |
+
+In Mission Planner upload the RoverCode.lua script to the scripts folder and reboot the Pixhawk. 
+
+### Code Details
+
+Left and right motor receive values from SERVO channels (73 and 74 stand for Throttle Left and Throttle Right respectively) using SRV_Channels:get_ouput_pwm function. 
+
+Since Trim is set to 1500, that's the value when relays are off. If value is more or less than 1500, rover moves either back or forward.
+
