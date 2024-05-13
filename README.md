@@ -89,5 +89,16 @@ In Mission Planner upload the RoverCode.lua script to the scripts folder and reb
 
 Left and right motor receive values from SERVO channels 2 and 4 (73 and 74 stand for Throttle Left and Throttle Right respectively) using SRV_Channels:get_ouput_pwm function. 
 
-Since Trim is set to 1500, that's the value when relays are off. If value is more or less than 1500, rover moves either back or forward.
+Since Trim is set to 1500, that's the value when relays are off. If value is more or less than 1500, rover moves either back or forward so we user SRV_Channels:set_output_pwm_chan to set pwm values on servos 1 and 3 for right and left motor respectively. 
 
+<br/>
+To make motors move faster, we use formula:
+<br/>
+math.floor(math.abs(1500 - "motor_pww_value")) * 2 + 1000
+<br/>
+ where 1500 is a trim value, motor_pwm_value is received from get_output_pwm function. 1000 is just some value we've decided to use to make motors faster. You can try to change it depending on your motors' efficiency. 
+
+
+
+
+<img src="https://github.com/varyashep/ArdupilotRover/blob/main/robot.png" width="300" height="300">
